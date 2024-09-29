@@ -5,11 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.usersmanagement.data.UserApiService
 import com.example.usersmanagement.data.Users
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class UserViewModel(private val apiService: UserApiService) : ViewModel() {
+@HiltViewModel
+class UserViewModel @Inject constructor(private val apiService: UserApiService) : ViewModel() {
     private val _users = MutableLiveData<List<Users>>()
     val users: LiveData<List<Users>> get() = _users
 
@@ -22,7 +25,7 @@ class UserViewModel(private val apiService: UserApiService) : ViewModel() {
             }
 
             override fun onFailure(call: Call<List<Users>>, t: Throwable) {
-                // Handle the error (optional)
+                // Handle the error
             }
         })
     }

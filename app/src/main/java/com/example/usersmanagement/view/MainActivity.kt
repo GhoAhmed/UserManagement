@@ -11,22 +11,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.usersmanagement.R
 import com.example.usersmanagement.data.UserApiService
 import com.example.usersmanagement.viewmodel.UserViewModel
-import com.example.usersmanagement.viewmodel.UserViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private val BASE_URL = "https://jsonplaceholder.typicode.com/"
     private val TAG: String = "Check Response"
 
     private lateinit var userAdapter: UserAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: View
 
-    // Using viewModels delegate with the factory
-    private val userViewModel: UserViewModel by viewModels { UserViewModelFactory(UserApiService.create(BASE_URL)) }
+    // Hilt will inject UserViewModel
+    private val userViewModel: UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
         // Set up RecyclerView
