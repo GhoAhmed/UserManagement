@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -55,5 +56,6 @@ dependencies {
 
     // Hilt for Dependency Injection
     implementation(libs.hilt)
+    kapt(libs.hiltCompiler)
 }
 
