@@ -1,18 +1,21 @@
 package com.example.usersmanagement
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
-    private var userList: List<Users> = listOf()
+class UserAdapter(private var userList: List<Users>, private val context: Context) : RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.text_user_name)
         val usernameTextView: TextView = itemView.findViewById(R.id.text_user_username)
         val emailTextView: TextView = itemView.findViewById(R.id.text_user_email)
+        val detailsButton: Button = itemView.findViewById(R.id.button_details)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -25,6 +28,19 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
         holder.nameTextView.text = user.name
         holder.usernameTextView.text = user.username
         holder.emailTextView.text = user.email
+
+        // Set up the click listener for the Details button
+        holder.detailsButton.setOnClickListener {
+            val intent = Intent(context, UserDetailsActivity::class.java).apply {
+                putExtra("name", user.name)
+                putExtra("username", user.username)
+                putExtra("email", user.email)
+                putExtra("address", user.address.city)
+                putExtra("phone", user.phone)
+                putExtra("company", user.company.name)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

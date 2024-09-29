@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="true"
+            android:label="User Details">
+        </activity>
     </application>
 
 </manifest>

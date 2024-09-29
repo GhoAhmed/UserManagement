@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         // Set up RecyclerView
         recyclerView = findViewById(R.id.recycler_view_users)
         progressBar = findViewById(R.id.progress_bar)
-        userAdapter = UserAdapter()
+        userAdapter = UserAdapter(listOf(), this)
         recyclerView.adapter = userAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
