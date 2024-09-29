@@ -1,4 +1,4 @@
-package com.example.usersmanagement
+package com.example.usersmanagement.data
 
 data class Users(
     val id: Int,

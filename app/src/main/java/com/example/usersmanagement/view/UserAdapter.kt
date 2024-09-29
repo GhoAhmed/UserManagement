@@ -1,4 +1,4 @@
-package com.example.usersmanagement
+package com.example.usersmanagement.view
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.usersmanagement.R
+import com.example.usersmanagement.data.Users
 
 class UserAdapter(private var userList: List<Users>, private val context: Context) : RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
 
