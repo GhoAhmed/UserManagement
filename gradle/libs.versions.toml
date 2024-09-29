@@ -13,6 +13,8 @@ retrofit = "2.9.0"
 gsonConverter = "2.9.0"
 coroutines = "1.6.4"
 hilt = "2.44"
+androidx-recyclerview = "1.3.2"
+androidx-cardview = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +36,9 @@ coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-c
 # Hilt for Dependency Injection
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hiltCompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidx-recyclerview" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "androidx-cardview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
