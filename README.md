@@ -26,3 +26,12 @@ This project follows the MVVM architecture, which provides a clear separation be
 
 - View: Activities responsible for displaying data.
 - ViewModel: Acts as a bridge between the model and the view. It holds the app's data and handles the logic for fetching data from the API.
+
+## How to Run the Project
+
+1- Clone the repository:
+ -git clone https://github.com/GhoAhmed/UserManagement.git
+2- Open the project in Android Studio.
+3- Sync the Gradle files to download all dependencies.
+4- Build and run the app on an emulator or physical device.
+
