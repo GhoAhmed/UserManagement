@@ -29,9 +29,10 @@ This project follows the MVVM architecture, which provides a clear separation be
 
 ## How to Run the Project
 
-1- Clone the repository:
- -git clone https://github.com/GhoAhmed/UserManagement.git
-2- Open the project in Android Studio.
-3- Sync the Gradle files to download all dependencies.
-4- Build and run the app on an emulator or physical device.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/GhoAhmed/UserManagement.git
+2. Open the project in Android Studio.
+3. Sync the Gradle files to download all dependencies.
+4. Build and run the app on an emulator or physical device.
 
