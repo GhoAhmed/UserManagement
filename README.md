@@ -36,3 +36,19 @@ This project follows the MVVM architecture, which provides a clear separation be
 3. Sync the Gradle files to download all dependencies.
 4. Build and run the app on an emulator or physical device.
 
+## Versions Used
+
+- **Android SDK Version**:
+  - Compile SDK: `34` 
+  - Min SDK: `19`
+
+- **Kotlin Version**: `1.9.0`  
+
+- **Gradle Version**: `8.6.1`  
+
+- **Dagger Hilt Version**: `2.51.1`  
+
+- **Retrofit Version**: `2.9.0`  
+
+
+
