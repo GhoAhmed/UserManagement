@@ -1,6 +1,7 @@
 package com.example.usersmanagement.view
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.usersmanagement.R
@@ -39,5 +40,12 @@ class UserDetailsActivity : AppCompatActivity() {
         textDetailAddress.text = address
         textDetailPhone.text = phone
         textDetailCompany.text = company
+
+        val backButton: Button = findViewById(R.id.button_back)
+        backButton.setOnClickListener {
+            finish()
+        }
     }
+
+
 }
